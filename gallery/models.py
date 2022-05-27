@@ -12,6 +12,15 @@ class Location(models.Model):
         verbose_name_plural = "Locations"
 
     def __str__(self):
-        return self.name
+        return self.location
 
+class Category(models.Model):
+    category = models.CharField(max_length=80, unique= True)
 
+    class Meta:
+        ordering = ["category"]
+        verbose_name = "Category"
+        verbose_name_plural = "Category"
+
+    def __str__(self):
+        return self.category
