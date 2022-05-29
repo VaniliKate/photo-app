@@ -1,3 +1,4 @@
+from unicodedata import category
 from django.shortcuts import render
 from .models import Image, Category, Location
 
@@ -14,14 +15,8 @@ def gallery(request):
     return render(request, 'gallery.html', {'gallery':gallery})
 
 def search(request):
-    if 'image' in request.GET and request.GET["image"]:
-        search_term  =  request.GET.get("image")
-        searched_images = Image.search_by_category(search_term)
-        message  = f"{search_term}"
-        
-        return render(request, 'search.html', {"message":message, "categories":searched_images})
-    else:
-        message = "You have not searched for any category"
-        
-        return render(request, 'search.html', {"message":message})
+    if request.method == 'GET':
+        search = request.GET.get('search')
+        image = Category.objects.all().filter(category=search)
+        return render(request, 'search.html', {"image":image})
 
