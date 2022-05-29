@@ -5,6 +5,10 @@ from django.conf.urls.static import static
 
 urlpatterns =[
     path('', views.index, name = 'home'),
-    path('search/', views.search_category, name = 'gallery'),
+    path('search/', views.search, name = 'search'),
+    path('gallery/', views.gallery, name = 'gallery'),
    
 ]
+
+if settings.DEBUG:
+    urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

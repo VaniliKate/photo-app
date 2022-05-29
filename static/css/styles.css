@@ -1,4 +1,17 @@
-h1
-{
-  color: green;
+
+body{
+  font-family: Raleway;
+  font-weight: 900;
 }
+
+.card-body{
+  background-color: #023047;
+  color: white;
+}
+
+
+.navbarr{
+
+  background-color: #023047;
+}
+
