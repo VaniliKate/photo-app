@@ -1,1 +1,1 @@
-web: gunicorn app:manage
+web: gunicorn gallery:manage
