@@ -26,7 +26,9 @@ SECRET_KEY = '36*up=0sb0a#wl^t40(qg8=jg-d^b)2uty7(%*_0!s1je1r$9o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://vanili-photo.herokuapp.com/',
+                 'localhost',
+                 '127.0.0.1']
 
 
 # Application definition
