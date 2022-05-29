@@ -1,17 +1,35 @@
-
-body{
+body {
   font-family: Raleway;
   font-weight: 900;
+  background-color: transparent;
 }
 
-.card-body{
+.card-body {
   background-color: #023047;
   color: white;
 }
 
 
-.navbarr{
-
-  background-color: #023047;
+.btn2 {
+  margin-right: 5px;
 }
 
+.navbarr {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #023047;
+  margin-bottom: 10px;
+}
+
+.wrapper {
+  background-image: url(/static/uploads/room-1336497__340.webp);
+  image-rendering: pixelated;
+  background-size: cover;
+  /*background-attachment: fixed;*/
+  background-position: 50% 50%;
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  margin-bottom: 10px;
+}
