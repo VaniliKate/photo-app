@@ -6,7 +6,7 @@ from .models import Image, Category, Location
 
 def index(request):
 
-    gallery = Image.objects.all() [:6]
+    gallery = Image.objects.all() [:4]
     return render(request, 'index.html', {'gallery':gallery})
 
 def gallery(request):
